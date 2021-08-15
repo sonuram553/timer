@@ -1,8 +1,11 @@
 @import "./reset";
+@import "./display-timer";
 
 main {
-  border: 1px solid;
   display: grid;
   width: 50%;
-  margin: 4rem auto 0;
+
+  &.ui.segment {
+    margin: 4rem auto 0;
+  }
 }

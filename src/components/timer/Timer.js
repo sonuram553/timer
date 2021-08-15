@@ -6,7 +6,7 @@ import { TimeField } from "./TimeField";
 
 export const Timer = () => {
   return (
-    <main>
+    <main className="ui segment">
       <TimeField />
       <CommonTimers />
       <DisplayTimer />

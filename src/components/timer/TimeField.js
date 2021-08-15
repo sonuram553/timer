@@ -1,5 +1,10 @@
 import React from "react";
 
 export const TimeField = () => {
-  return <div>TimeField</div>;
+  return (
+    <div className="ui action input">
+      <input type="number" placeholder="Enter minutes" />
+      <button className="ui button">Start</button>
+    </div>
+  );
 };
