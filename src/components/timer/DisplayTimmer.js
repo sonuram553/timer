@@ -6,11 +6,12 @@ export const DisplayTimer = ({ minute, second, paused, setPaused }) => {
       <p>
         {padNumber(minute)}:{padNumber(second)}
       </p>
-      <div>
-        <button onClick={() => setPaused((paused) => !paused)}>
-          {paused ? "Play" : "Pause"}
-        </button>
-      </div>
+      <button
+        className="circular ui icon button"
+        onClick={() => setPaused((paused) => !paused)}
+      >
+        <i className={`icon ${paused ? "play" : "pause"}`}></i>
+      </button>
     </div>
   );
 };

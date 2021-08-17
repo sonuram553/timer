@@ -4,8 +4,13 @@
 main {
   display: grid;
   width: 50%;
+  justify-items: center;
 
   &.ui.segment {
     margin: 4rem auto 0;
   }
+}
+
+.time-field {
+  justify-self: stretch;
 }
