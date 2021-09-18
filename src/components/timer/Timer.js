@@ -10,8 +10,20 @@ export const Timer = () => {
   const [paused, setPaused] = useState(false);
 
   const onSetMinute = (minute) => {
-    setMinute(minute);
     setSecond(0);
+    setMinute(minute);
+    setPaused(false);
+  };
+
+  const resetTimer = () => {
+    setSecond(0);
+    setMinute(0);
+    setPaused(false);
+  };
+
+  const togglePaused = () => {
+    if (minute === 0 && second === 0) return null;
+    setPaused((paused) => !paused);
   };
 
   useEffect(() => {
@@ -33,13 +45,14 @@ export const Timer = () => {
 
   return (
     <main className="ui segment">
-      <TimeField />
+      <TimeField onSetMinute={onSetMinute} />
       <CommonTimers onSetMinute={onSetMinute} />
       <DisplayTimer
         minute={minute}
         second={second}
         paused={paused}
-        setPaused={setPaused}
+        togglePaused={togglePaused}
+        resetTimer={resetTimer}
       />
     </main>
   );
