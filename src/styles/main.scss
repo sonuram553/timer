@@ -1,16 +1,20 @@
 @import "./reset";
 @import "./display-timer";
 
-main {
+.timer {
   display: grid;
-  width: 50%;
+  width: 35%;
   justify-items: center;
 
   &.ui.segment {
-    margin: 4rem auto 0;
+    margin: 6rem auto 0;
   }
 }
 
-.time-field {
-  justify-self: stretch;
+.time-form {
+  width: 70%;
+
+  &__field {
+    width: 100%;
+  }
 }

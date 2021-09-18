@@ -1,7 +1,7 @@
 import React from "react";
 
 export const CommonTimers = ({ onSetMinute }) => {
-  const miuntes = [10, 20];
+  const miuntes = [10, 20, 30];
 
   return (
     <div className="ui horizontal large selection list">

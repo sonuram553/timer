@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export const TimeField = ({ onSetMinute }) => {
   const [num, setNum] = useState("");
-  
+
   const onSubmit = (e) => {
     e.preventDefault();
     onSetMinute(+num);
@@ -10,12 +10,14 @@ export const TimeField = ({ onSetMinute }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <div className="ui action input time-field">
+    <form onSubmit={onSubmit} className="time-form">
+      <div className="ui action input time-form__field">
         <input
           type="number"
           placeholder="Enter minutes"
           value={num}
+          min="0"
+          max="60"
           onChange={(e) => {
             setNum(e.target.value);
           }}

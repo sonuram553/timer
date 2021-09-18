@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { CommonTimers } from "./CommonTimer";
+import { CommonTimers } from "./CommonTimers";
 import { DisplayTimer } from "./DisplayTimmer";
 import { TimeField } from "./TimeField";
 
@@ -44,16 +44,18 @@ export const Timer = () => {
   }, [minute, second, paused]);
 
   return (
-    <main className="ui segment">
-      <TimeField onSetMinute={onSetMinute} />
-      <CommonTimers onSetMinute={onSetMinute} />
-      <DisplayTimer
-        minute={minute}
-        second={second}
-        paused={paused}
-        togglePaused={togglePaused}
-        resetTimer={resetTimer}
-      />
+    <main>
+      <section className="timer ui segment">
+        <TimeField onSetMinute={onSetMinute} />
+        <CommonTimers onSetMinute={onSetMinute} />
+        <DisplayTimer
+          minute={minute}
+          second={second}
+          paused={paused}
+          togglePaused={togglePaused}
+          resetTimer={resetTimer}
+        />
+      </section>
     </main>
   );
 };
