@@ -5,7 +5,7 @@ export const TimeField = ({ onSetMinute }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    onSetMinute(+num);
+    onSetMinute(num);
     setNum("");
   };
 

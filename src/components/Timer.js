@@ -10,8 +10,9 @@ export const Timer = () => {
   const [paused, setPaused] = useState(false);
 
   const onSetMinute = (minute) => {
+    if (minute === "") return;
     setSecond(0);
-    setMinute(minute);
+    setMinute(+minute);
     setPaused(false);
   };
 
