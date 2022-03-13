@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export const DisplayTimer = ({
   minute,
@@ -7,6 +7,11 @@ export const DisplayTimer = ({
   togglePaused,
   resetTimer,
 }) => {
+  useEffect(() => {
+    if (minute === 0 && second === 0) document.title = "Timer";
+    else document.title = `${padNumber(minute)}:${padNumber(second)}`;
+  }, [minute, second]);
+
   return (
     <div className="display-timer">
       <p>
